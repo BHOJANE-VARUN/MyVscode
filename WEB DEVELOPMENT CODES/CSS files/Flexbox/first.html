@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box</title>
+    <style>
+ 
+        .cont{
+            display: flex;
+            /* justify-content: center; */
+            background-color: aqua;
+            flex-wrap:wrap;
+            align-content: center;
+            /* flex-direction: column; */
+            width: 750px;
+            height: 1000px;
+        }
+        .it{
+            background-color: yellow;
+            width: 100px;
+            margin:10px;
+            /* border: 1px solid black; */
+            /* text-align: center; */
+            line-height: 75px;
+            font-size: 30px;
+
+        }
+        @media all and (min-width:500px){
+            body{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>This is my first ever flexible box ,i have make sure that is it <strong>responsive</strong></p>
+    <br>
+    <br>
+
+    <div class="cont">
+        <div class="it">1</div> 
+    </div>
+</body>
+</html>

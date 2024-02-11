@@ -1,0 +1,4 @@
+binary tree in which elements are arrange in acsending order as left subtree-root-right subtree,
+inorder traversal of BST wil give a elements in acsending order,
+binary search is done by compairing the root elements and then contining the search,
+there are no duplicate elements in the BST,

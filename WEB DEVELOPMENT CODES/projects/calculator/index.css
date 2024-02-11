@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+.workflow{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.rows{
+    display: flex;
+    justify-content: space-around;
+}
+.maindiv{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#screen{
+    width: 28vw;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: white;
+}
+.keys{
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+button{
+    width: 5vw;
+    height: 5vh;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job applications</title>
+</head>
+<body>
+    <h1><strong>Job applications</strong></h1>
+    <form>
+        <label for="name">name:</label>
+        <br>
+        <input type="text" id="name">
+        <br>
+        <label for="phone">phone</label>
+        <br>
+        <input type="number" id="phone">
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email">
+        <br>
+        <label for="resume">resume</label>
+        <br>
+        <input type="file" id="resume">
+        <br>
+        <label for="experience">experience:</label>
+        <br>
+        <input type="number" id="experience" min="5" max="50">
+        <br>
+        <fieldset>
+            <legend>Skills</legend>
+                <label for="Skills">HTML</label>
+                <input type="radio" id="Skills">
+                <br>
+                <label for="Skills">CSS</label>
+                <input type="radio" id="Skills">
+                <br>
+                <label for="skile">javascript</label>
+                <input type="radio" id="Skills">
+                <br>
+        </fieldset>
+        <label for="high">High education</label>
+        <br>
+        <select name="high" id="high">
+            <option value="high school">high school</option>
+            <option value="B.tech">B.tech</option>
+            <option value="Mtech">Mtech</option>
+        </select>
+        <br>
+        <label for="available">Available:</label>
+        <br>
+        <label for="available">Part-time</label>
+        <input type="radio" name="available" id="available">
+        <br>
+        <label for="available">Full-time</label>
+        <input type="radio" id="available" name="available">
+        <br>
+        <label for="comment">Comment:</label>
+        <br>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Questions..other any query"></textarea>
+        <br>
+        <button>Register</button>
+      </form>
+</body>
+</html>

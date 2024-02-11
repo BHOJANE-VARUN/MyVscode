@@ -1,0 +1,17 @@
+h1{
+    color: aqua;
+    display: flex;
+   
+    
+}
+#my{
+    background-color: red;
+}
+.firstsl{
+    font-size: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.secondsl{
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 3px solid black;
+}
+.mainflow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.maindiv{
+    width: 350px;
+    height: 260px;
+    background-image: url("top-view-half-soccer-field-260nw-206556235.webp");
+    display: flex;
+    justify-content: center;
+}
+.ball{
+    height: 1vh;
+    width: 1vw;
+    align-self: center;
+    justify-self: center;
+}
+.ball>img{
+    border: 2px solid black;
+    border-radius: 180px;
+    width: 20px;
+    height: 20px;
+    position: ;
+    animation-name: movation;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+@keyframes movation{
+    0%{bottom: 0px;}
+    100%{bottom: 155px;}
+}
+.messi>img{
+    width: 30px;
+    height: 60px;
+    opacity: 0.9;
+    position: relative;
+}
+.goalpost{
+    height: 13vh;
+    width: 20vw;
+    position: relative;
+}
+.messi{
+    height: 10vh;
+    width: 4vw;
+    align-self: center;
+    justify-self:flex-end;
+    position: relative;
+}

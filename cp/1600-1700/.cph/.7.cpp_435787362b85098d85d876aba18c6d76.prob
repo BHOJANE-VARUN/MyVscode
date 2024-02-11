@@ -1,0 +1,1 @@
+{"name":"Local: 7","url":"c:\\MyVScode\\cp\\1600-1700\\7.cpp","tests":[{"id":1705770274610,"input":"3\n5\n3 26 -79 72 23\n2\n66 44\n1\n81\n1\n-97\n5\n10 -5 14 -20 4\n3\n-10 5 -2","output":"205\n81\n24"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\MyVScode\\cp\\1600-1700\\7.cpp","group":"local","local":true}

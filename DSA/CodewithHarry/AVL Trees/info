@@ -1,0 +1,2 @@
+avl trees are made to obtain a tree which is well balanced both sides ,
+balance factor = height of right sub tree - height of left sub tree

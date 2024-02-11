@@ -1,0 +1,13 @@
+.Box{
+    padding: 50px;
+    border:5px solid aqua;
+    margin: 50px;
+    background-color: black;
+    box-sizing: border-box;
+}
+#main{
+    background-color: bisque;
+}
+.row{
+    background-color: blueviolet;
+}

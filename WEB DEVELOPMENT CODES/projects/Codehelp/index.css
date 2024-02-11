@@ -1,0 +1,152 @@
+*{
+    padding: 0px;
+    margin: 0px;
+   
+}
+header{
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+}
+.title,.maintitle{
+    display: inline;
+    align-self: center;
+    justify-self: center;
+}
+.title{
+    font-size: 3.5vw;
+    text-decoration-style: solid;
+    margin-left:0.3vw;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.maintitle{
+    width: 3rem;
+    height: 3rem;
+    
+}
+.first{
+    height: 12vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10vw;
+    margin-top: 0.9vh;
+}
+.third{
+    width: 20vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thirdbutton{
+    color: white;
+    background-color: rgb(88, 88, 235);
+    width: 8vw;
+    height: 4vh;
+    border-radius: 6px;
+    font-size:1.1vw;
+    border: 1px solid black;
+}
+nav{
+    height: 12vh;
+    width: 60vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 35vw;
+}
+li>a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.75vw;
+}
+.mainbody{
+   height: 88;
+   width: 100;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: space-evenly;
+   padding-top: 10vh;
+   margin-left: 3.2vw;
+}
+.wallimg>img{
+    height: 70vh;
+    width: 40vw;
+    margin-right: 2vw;
+    margin-top: -8vh;
+    border-radius: 15px;
+    border:0.9px solid black;
+    animation: reverseexample;
+    animation-duration: 2s;
+    position:relative;
+}
+.smallfirst{
+    color: rgb(88, 88, 235);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5vw;
+    animation: example;
+    animation-duration: 0.8s;
+    position:relative;
+}
+.bigtitle{
+    height: 23vh;
+    width: 41.5vw;
+    font-size: 4.7vw;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: example;
+    animation-duration: 1.2s;
+    position:relative;
+}
+.smallpara{
+    font-family:sans-serif;
+    font-size: large;
+    width: 41.5vw;
+    animation: example;
+    animation-duration: 1.5s;
+    position:relative;
+}
+.twobuttons{
+    margin-top: 10vh;
+    width: 18vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    animation: example;
+    animation-duration: 2s;
+    position:relative;
+}
+.secondbutton{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 8vw;
+    height: 5vh;
+    border-radius: 6px;
+    font-size:1.1vw;
+    border: 1px solid black;
+}
+.firstbutton{
+    color: white;
+    background-color: rgb(88, 88, 235);
+    width: 8vw;
+    height: 5vh;
+    border-radius: 6px;
+    font-size:1.1vw;
+    border: 1px solid black;
+    margin-left: 1vw;
+}
+@keyframes example {
+    0%   {left:-320px; top:0px;}
+    100% { left:0px; top:0px;}
+  }
+@keyframes reverseexample {
+    0%   {left:720px; top:0px;}
+    100% { left:0px; top:0px;}
+  }
+

@@ -1,0 +1,32 @@
+*{
+    padding: 0%;
+    margin:0%;
+}
+body{
+    background-color: rgb(222, 167, 167);
+    height: 50vh;
+    width: 37vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+button{
+    height: 5vh;
+    width: 5vw;
+    color: rgb(235, 135, 228);
+    margin: 1%;
+    border:3px solid lightgreen;
+}
+.set{
+    display: flex;
+    /* border: 2px rgb(220, 27, 27) solid; */
+    height: 25vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25%;
+    padding: 25%;
+}
+footer{
+    margin: 25%;
+}

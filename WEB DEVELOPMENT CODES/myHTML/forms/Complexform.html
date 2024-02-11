@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex forms</title>
+</head>
+<body>
+    <h1><strong>Complex forms</strong></h1>
+    <form>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">name:</label>
+        <input type="text" id="name">
+        <label for="Email">Email</label>
+        <input type="email" id="Email">
+        <label for="Phone">Phone</label>
+        <input type="tel" id="Phone">
+        <label for="date">Date of birth</label>
+        <input type="date" id="date">
+        <label for="gende">Gender:</label>
+        <label for="gende">Male</label>
+        <input type="radio" id="gende" name="gende">
+        <label for="gende">Female</label>
+        <input type="radio" id="gende" name="gende">
+        <label for="country">country</label>
+        <select name="country" id="country" required>
+            <option value="nil" selected>--select a country--</option>
+            <option value="india">india</option>
+            <option value="us">US</option>
+            <option value="london">london</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Address Information</legend>
+        <label for="street">street</label>
+        <input type="text" id="street">
+        <label for="city">city</label>
+        <input type="text" id="city">
+        <label for="state">state</label>
+        <input type="text" id="state">
+        <label for="pincode">pincode</label>
+        <input type="text" id="pincode">
+    </fieldset>
+    <fieldset>
+        <legend>Other Information</legend>
+        <label for="comment">comments</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="any Questions"></textarea>
+        <label for="terms">I agree to terms and conditions</label>  
+        <input type="checkbox" id="terms">
+    </fieldset>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
