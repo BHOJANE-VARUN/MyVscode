@@ -1,0 +1,1 @@
+{"name":"Local: Palindrome_Pairs","url":"c:\\MyVScode\\cp\\topic_wise\\bit manipulation\\Palindrome_Pairs.cpp","tests":[{"id":1708329867366,"input":"6\naab\nabcac\ndffe\ned\naa\naade","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\MyVScode\\cp\\topic_wise\\bit manipulation\\Palindrome_Pairs.cpp","group":"local","local":true}
