@@ -1,12 +1,30 @@
+#define ll long long int
 #include<bits/stdc++.h>
-#define int long long int
-#define Y "YES"
-#define N "NO"
-#define MOD 1000000007
-//const int maxsize = 1e5;
-//int arr[maxsize+1];
-#define test int monu;cin>>monu;while(monu--)
+#define for0(i,b) for(ll i=0;i<b;++i)
+#define rloop(i,a,b) for(ll i=a;i>=b;i--)
+#define in(a,n) for(ll i=0;i<n;++i) cin>>a[i];
+#define pb push_back
+#define all(v) v.begin(),v.end()
+#define dis(v) for(auto i:v)cout<<i<<" ";cout<<endl;
+#define display(arr,n) for(int i=0; i<n; i++)cout<<arr[i]<<" ";cout<<endl;
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);srand(time(NULL));
+#define l(a) a.length()
+#define fr first
+#define sc second
+#define mod 1000000007
+#define endl '\n'
+#define yes cout<<"Yes"<<endl;
+#define no cout<<"No"<<endl;
 using namespace std;
+
+//0^1 0&1 1^0 10001 01000  1100 1101
+/*{{  001
+   {  010      100
+      011      010
+      100
+      101 
+      222
+   */
 int bit(int n){
   int cnt=0;
     while(n){
@@ -14,64 +32,34 @@ int bit(int n){
     }
     return cnt;
 }
-signed main()
-{
-test
-{
-    int n;
-    cin>>n;
-    int *arr = new int[n];
-    for(int i =0;i<n;i++)
-    {
-      cin>>arr[i];
-    }
-    vector<vector<int>> prefix;
-    // for(int i =0;i<32;i++)
-    // {
-    //     vector<int> cur(n+1,0);
-    //     for(int j =0;j<n;j++)
-    //     {
-    //         if(((1<<i)&arr[j])>0)
-    //         {
-    //             cur[j+1] = cur[j]+1;
-    //         }
-    //         else cur[j+1] = cur[j];
-    //     }
-    //     prefix.push_back(cur);
-    // }
-    vector<vector<int>>v;
+void solve(){
+    ll n; cin>>n;
+    ll a[n];
+    for0(i,n) cin>>a[i]; 
+    vector<vector<ll>>v;
    
-    vector<int>bits(32,0);
+    vector<ll>bits(32,0);
      v.push_back(bits);
-    for(int i=0;i<n;i++){
-        int leftpos= bit(arr[i]);
+    for0(i,n){
+        int leftpos= bit(a[i]);
         bits[leftpos]++;
         v.push_back(bits);
     }
-    for(auto i:v)
-    {
-        for(auto j:i) cout<<j<<" ";
-        cout<<endl;
+    ll k; cin>>k;
+    while(k--){
+        ll a,b,c; cin>>a>>b>>c;
+        n=b-a+1;
+        ll  idx=bit(c);
+       
+        cout<<n-((v[b][idx])-(v[a-1][idx]))<<"\n";
     }
-    // int q;
-    // cin>>q;
-    // while(q--)
-    // {
-    //     int l,r,x;
-    //     cin>>l>>r>>x;
-    //     int msb =0;
-    //     for(int i =31;i>=0;i--)
-    //     {
-    //         if(((1<<i)&x)>0)
-    //         {
-    //           msb =i;
-    //           break;
-    //         }
-    //     } 
-    //     int ele = r-l+1;
-    //     int setbits = prefix[msb][r]-prefix[msb][l-1];
-    //     cout<<(ele-setbits)<<endl;
-    // }
 }
-//dusro ka code copy karne se khar nahi chalta bhai
+
+int main()
+{
+    fast
+    int t; cin>>t;
+    
+    while(t--) solve();
+    return 0;
 }
