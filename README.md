@@ -22,5 +22,5 @@ CP:
     contests
 
 **********************************************************************************************************************************************************
-If any queries or improvments feel free to contact me on my Linkedln 
+If any queries or improvments feel free to contact me on my Linkedln :)
 
