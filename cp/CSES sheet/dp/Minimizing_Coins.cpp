@@ -31,13 +31,13 @@ int solve(int x,int *arr,int n,unordered_map<int,int> &mp)
 }
 int solvemem(int x,int *arr,int n)
 {
-    vector<int> dp(x+1);
+    vector<int> dp(x+1,0);
     for(int i =1;i<x+1;i++)
     {
         int ans = INT_MAX;
         for(int j =0;j<n;j++)
         {
-            if(i-arr[j]==0)
+            if(i-arr[j]>=0)
             {
                 ans = min(ans,dp[i-arr[j]]+1ll);
             }
