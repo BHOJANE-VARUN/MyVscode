@@ -28,6 +28,7 @@ void accept()
     {
         int key = arr[i][arr[i].size() - 1] - '0';
         int pos = key;
+        int prev = pos;
         do
         {
             if (st[pos].prn.size() == 0)
@@ -42,12 +43,12 @@ void accept()
                 if (st[pos].c != -1)
                 {
                     pos = st[pos].c;
-                    pos = key;
+                    prev = pos;
                 }
                 else
                 {
                     pos++;
-                    st[key].c = pos;
+                    st[prev].c = pos;
                 }
             }
             pos = pos % 100;
@@ -77,11 +78,10 @@ void deleterecord()
     }
     if(st[key].prn==p)
     {
-        st[key].prn = "";
-        if(prev!=-1)
-        {
-            st[prev].c = st[key].c;
-        }
+        int ct = st[key].c;
+        int prev = key;
+        st[prev].name = st[ct].name;
+        st[prev].c = st[ct].c;
     }
     else cout<<"record not found"<<endl;
 }
@@ -91,10 +91,8 @@ void search()
     cout<<"Enter the PRN No to be deleted: ";
     cin>>p;
     int key = p[p.size() - 1] - '0';  
-    int prev =-1;
     while(st[key].c!=-1 and st[key].prn!=p)
     {
-        prev = key;
         key = st[key].c;
     }
     if(st[key].prn==p)

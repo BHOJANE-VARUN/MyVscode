@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stack>
 using namespace std;
 class node
 {
@@ -58,6 +59,37 @@ void inorder(node*head)
     cout<<head->data<<" ";
     inorder(head->right);
 }
+void inorderiteratively(node* root)
+{
+    stack<node*> s;
+    node* curr = root;
+ 
+    while (curr != NULL || s.empty() == false) {
+         
+        // Reach the left most node of the
+        // curr node
+        while (curr != NULL) {
+             
+            // Place pointer to a tree node on
+            // the stack before traversing
+            // the node's left subtree
+            s.push(curr);
+            curr = curr->left;
+        }
+ 
+        // Current must be NULL at this point
+        curr = s.top();
+        s.pop();
+ 
+        cout << curr->data << " ";
+ 
+        // we have visited the node and its
+        // left subtree.  Now, it's right
+        // subtree's turn
+        curr = curr->right;
+ 
+    }
+}
 void preorder(node*head)
 {
     if(head==NULL) return;
@@ -65,6 +97,24 @@ void preorder(node*head)
     cout<<head->data<<" ";
     preorder(head->left);
     preorder(head->right);
+}
+void preorderiteratively(node* head)
+{
+    node * cur = head;
+    stack<node*> s;
+    while(!s.empty() or cur!=NULL)
+    {
+        while(cur)
+        {
+            cout<<cur->data<<" ";
+            s.push(cur);
+            cur = cur->left;
+        }
+        node * temp = s.top();
+        s.pop();
+        cur = temp->right;
+    }
+    cout<<endl;
 }
 void postorder(node*head)
 {
@@ -143,13 +193,13 @@ int main()
     head = insert(head,1);
     head = insert(head,4);
     head = insert(head,5);
-    inorder(head);
-    cout<<endl;
-    preorder(head);
-    cout<<endl;
-    postorder(head);
-    cout<<endl;
-    head = delet(head,1);
-    inorder(head);
+    preorderiteratively(head);
+    // cout<<endl;
+    // preorder(head);
+    // cout<<endl;
+    // postorder(head);
+    // cout<<endl;
+    // head = delet(head,1);
+    // inorderiteratively(head);
     cout<<endl;
 }
