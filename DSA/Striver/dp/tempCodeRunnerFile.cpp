@@ -1,0 +1,1 @@
+void _print(int t) {cerr << t;}
