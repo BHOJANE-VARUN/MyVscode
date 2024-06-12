@@ -13,6 +13,7 @@ vector<int> bfstraversal(int v,vector<int> adj[])
     vis[0] = 1;
     queue<int> q;
     vector<int> bfs;
+    q.push(0);
     while(!q.empty())
     {
         int node = q.front();

@@ -10,63 +10,53 @@
     cin >> monu; \
     while (monu--)
 using namespace std;
-class Solution
-{
+class Solution {
 public:
-    bool valid(int i, int j, int n, int m)
-    {
-        if (i >= 0 and i < n and j >= 0 and j < m)
-            return true;
-        else
-            return false;
-    }
-    void bfs(vector<vector<int>> &ans, int i, int j, vector<vector<int>> &mat)
-    {
-        int n = mat.size(), m = mat[0].size();
-        vector<vector<bool>> visit(n, vector<bool>(m, false));
-        queue<pair<int, pair<int, int>>> q;
-        q.push({0, {i, j}});
-        visit[i][j] = 1;
-        while (!q.empty())
-        {
-            int cnt = q.front().first, row = q.front().second.first, col = q.front().second.second;
-            q.pop();
-            vector<pair<int, int>> neighbors = {
-                {row - 1, col}, // top
-                {row, col + 1}, // right
-                {row + 1, col}, // bottom
-                {row, col - 1}, // left
-            };
-            for (auto ele : neighbors)
-            {
-                int a = ele.first, b = ele.second;
-                if (valid(a, b, n, m) and !visit[a][b])
-                {
-                    if(mat[a][b]==0)
-                    {
-                        ans[i][j] = cnt;
-                        return;
-                    }
-                    else{
-                        visit[row][col] = 1;
-                        q.push({cnt+1, {a, b}});
-                    }
-                }
+    vector<int> DIR = {0, 1, 0, -1, 0};
+    vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
+        int m = mat.size(), n = mat[0].size();
+        queue<pair<int, int>> q;
+        for (int r = 0; r < m; ++r)
+            for (int c = 0; c < n; ++c)
+                if (mat[r][c] == 0) q.emplace(r, c);
+                else mat[r][c] = -1; // Marked as not processed yet!
+
+        while (!q.empty()) {
+            auto [r, c] = q.front(); q.pop();
+            for (int i = 0; i < 4; ++i) {
+                int nr = r + DIR[i], nc = c + DIR[i+1];
+                if (nr < 0 || nr == m || nc < 0 || nc == n || mat[nr][nc] != -1) continue;
+                mat[nr][nc] = mat[r][c] + 1;
+                q.emplace(nr, nc);
             }
         }
+        return mat;
     }
-    vector<vector<int>> updateMatrix(vector<vector<int>> &mat)
-    {
-        int n = mat.size(), m = mat[0].size();
-        vector<vector<int>> ans(n, vector<int>(m, 0));
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < m; j++)
-            {
-                bfs(ans, i, j, mat);
+};
+//dynamic programming approch
+class Solution { // 48 ms, faster than 99.64%
+public:
+    vector<vector<int>> updateMatrix(vector<vector<int>> &mat) {
+        int m = mat.size(), n = mat[0].size(), INF = m + n; // The distance of cells is up to (M+N)
+        for (int r = 0; r < m; r++) {
+            for (int c = 0; c < n; c++) {
+                if (mat[r][c] == 0) continue;
+                int top = INF, left = INF;
+                if (r - 1 >= 0) top = mat[r - 1][c];
+                if (c - 1 >= 0) left = mat[r][c - 1];
+                mat[r][c] = min(top, left) + 1;
             }
         }
-        return ;
+        for (int r = m - 1; r >= 0; r--) {
+            for (int c = n - 1; c >= 0; c--) {
+                if (mat[r][c] == 0) continue;
+                int bottom = INF, right = INF;
+                if (r + 1 < m) bottom = mat[r + 1][c];
+                if (c + 1 < n) right = mat[r][c + 1];
+                mat[r][c] = min(mat[r][c], min(bottom, right) + 1);
+            }
+        }
+        return mat;
     }
 };
 signed main()
