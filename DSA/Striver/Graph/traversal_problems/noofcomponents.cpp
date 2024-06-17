@@ -35,7 +35,6 @@ public:
             {
                 cnt++;
                 dfshelper(i,isConnected,vis);
-                i=0;
             }
         }
         return cnt;
