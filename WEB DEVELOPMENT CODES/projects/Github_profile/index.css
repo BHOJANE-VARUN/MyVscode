@@ -1,0 +1,62 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://images.alphacoders.com/132/1328866.png");
+    opacity: 0.85;
+}
+.butt{
+    width: 30vw;
+    height: 5vh;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.user{
+    width: 60vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(219, 219, 219);
+    margin: 5vh;
+}
+.userimg{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+img{
+    width: 60%;
+    height: 50%;
+    border: 10px solid rgb(252, 252, 252);
+    border-radius: 100px;
+}
+.userinfo{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#tag{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    margin: 1%;
+}
+.tags{
+    background-color: rgb(255, 255, 255);
+    margin: 1%;
+}
