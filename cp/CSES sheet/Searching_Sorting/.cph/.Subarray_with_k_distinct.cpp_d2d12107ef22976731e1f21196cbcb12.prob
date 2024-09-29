@@ -1,0 +1,1 @@
+{"name":"Local: Subarray_with_k_distinct","url":"c:\\MyVScode\\cp\\CSES sheet\\Searching_Sorting\\Subarray_with_k_distinct.cpp","tests":[{"id":1726294257746,"input":"5 2\n1 2 3 1 1","output":"10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\MyVScode\\cp\\CSES sheet\\Searching_Sorting\\Subarray_with_k_distinct.cpp","group":"local","local":true}

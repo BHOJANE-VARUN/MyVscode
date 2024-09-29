@@ -29,7 +29,7 @@
 //     vector<int> ans(n);
 //     for(int i =0;i<n;i++)
 //     {
-//         cin>>arr[i].a.first>>arr[i].a.second; 
+//         cin>>arr[i].a.first>>arr[i].a.second;
 //         arr[i].index =i;
 //     }
 //     sort(arr.begin(),arr.end());
@@ -70,7 +70,7 @@
 //     vector<int> ans(n);
 //     for(int i =0;i<n;i++)
 //     {
-//         cin>>arr[i].a.first>>arr[i].a.second; 
+//         cin>>arr[i].a.first>>arr[i].a.second;
 //         arr[i].index =i;
 //     }
 //     sort(arr.begin(),arr.end());
@@ -104,45 +104,68 @@
 //         cout<<i.a.first<<" "<<i.a.second<<" "<<ans[i.index]<<endl;
 //     }
 // }
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define int long long int
 #define Y "YES"
 #define N "NO"
 #define MOD 1000000007
-//const int maxsize = 1e5;
-//int arr[maxsize+1];
-#define test int monu;cin>>monu;while(monu--)
+// const int maxsize = 1e5;
+// int arr[maxsize+1];
+#define test     \
+    int monu;    \
+    cin >> monu; \
+    while (monu--)
 using namespace std;
+bool comp(vector<int> &a, vector<int> &b)
+{
+    return (a[1] < b[1]);
+}
 signed main()
 {
     int n;
-    cin>>n;
-    vector<int> ans(n);
-    vector<array<int,3>> arr(n);
-    set<array<int,2>> st;
-    int ansnum =0;
-    for(int i =0;i<n;i++)
+    cin >> n;
+    vector<int> ans(n, 0);
+    vector<vector<int>> arr(n, vector<int>(3));
+    set<pair<int, int>> st;
+    int ansnum = 0;
+    for (int i = 0; i < n; i++)
     {
-        cin>>arr[i][1]>>arr[i][0];
+        cin >> arr[i][0] >> arr[i][1];
         arr[i][2] = i;
     }
-    sort(arr.begin(),arr.end());
-    for(int i =0;i<n;i++)
+    sort(arr.begin(), arr.end(), comp);
+
+    for (int i = 0; i < n; i++)
     {
-        auto it = st.lower_bound({arr[i][1]});
-        if(it!=st.begin())
+        if (st.empty())
         {
-            it--;
-            ans[arr[i][2]] = (*it)[1];
-            st.erase(it);
+            st.insert({arr[i][1] * -1, ansnum});
+            ans[arr[i][2]] = ansnum;
         }
-        else{
-            ans[arr[i][2]] = st.size();
-            st.insert({arr[i][0],ans[arr[i][2]]});
+        else
+        {
+            auto it = st.upper_bound({arr[i][0] * -1, INT_MAX});
+            // cout<<endl;
+            // cout<<(*it).first<<' '<<arr[i][0]*-1<<endl;
+            if (it != st.end())
+            {
+                ans[arr[i][2]] = (*it).second;
+                st.erase(it);
+                st.insert({arr[i][1]*-1,ans[arr[i][2]]});
+            }
+            else
+            {
+                ans[arr[i][2]] = st.size();
+                st.insert({arr[i][1]*-1, ans[arr[i][2]]});
+            }
+            ansnum = max(ansnum, ans[arr[i][2]]);
         }
-        ansnum = max(ansnum,ans[arr[i][2]]);
     }
-    cout<<ansnum+1<<endl;
-    for(auto i:ans) cout<<i+1<<" ";
-//dusro ka code copy karne se khar nahi chalta bhai
+    // cout<<endl;
+    // for(auto i:arr) cout<<i[0]<<" "<<i[1]<<" "<<ans[i[2]]<<endl;
+    // cout<<endl;
+    cout << ansnum + 1 << endl;
+    for (auto i : ans)
+        cout << i + 1 << " ";
+    // dusro ka code copy karne se khar nahi chalta bhai
 }
