@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple web page by angular js</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+        <label>Enter you name:</label>
+        <input ng-model="name" type="text" name="name"/>
+        <br>
+        <p ng-bind="name"></p>
+        <br ng-init="dev='varun bhojane'">
+        App developed by :
+        <p ng-bind="dev"></p>
+        <p>Another developer: {{dev}}</p>
+        <p>{{3+3==6}}</p>
+        <p ng-init="person={name:'alex',age:'18'};arr=[2,4,2,5]">object person name: {{person.name}} object person {{person.age}}</p>
+        <p ng-bind="arr[3]"></p>
+
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Task manager</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="app" ng-controller="con" ng-init="tasks=[]">Todo Task Manager
+    <div>
+        <input type="text" name="Task" ng-model="curtask"/>
+        <button ng-click="addtask()">add</button>
+    <div>
+        <li ng-repeat="x in tasks">
+            {{x.name}}
+            <button ng-click="deletetask(x)">Delete</button>
+            <button ng-click="edittask(x)">Edit</button>
+            <br>
+        </li>  
+    </div>
+    </div>
+</div>
+<script>
+    var app = angular.module('app',[]);
+    app.controller('con',($scope)=>{
+        $scope.addtask = ()=>{
+            $scope.tasks.push({name:$scope.curtask});
+            $scope.curtask = "";
+        }
+        $scope.deletetask = (varun)=>{
+            $scope.tasks = $scope.tasks.filter(x => x.name!==varun.name)
+        }
+        $scope.edittask = (varun)=>{
+            $scope.deletetask(varun);
+            $scope.curtask = varun.name;
+        }
+    })
+</script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list practice</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="con" ng-init="tasks=['task1','task2','task3'];">
+   
+        <label for="task">Todo:</label>
+        <input ng-model="fl" type="text" name="tasks" id="task" placeholder="Enter your todo here">
+        <button ng-click="addtask()">Add todo</button>
+        {{fl}}
+    <div>    
+        <li ng-repeat="x in tasks">{{x}}</li>
+    </div>
+</body>
+<script>
+    const app = angular.module("myapp",[]);
+    app.controller("con",($scope)=>{
+        $scope.addtask = ()=>{
+            console.log("hello")
+            $scope.tasks.push($scope.fl);
+        }
+    })
+</script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo todo list</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body ng-app ="myapp" ng-controller="con" ng-init="arr=['task1','task2']">
+    <label for="task">Todo:</label>
+    <input ng-model="varun" type="text" name="task" id="task">
+    <div ng-bind="varun"></div>
+    <button ng-click="addtask()" type="button">Add todo</button>
+    <div>
+        <li ng-repeat="x in arr">{{x}}</li>
+    </div>
+</body>
+<script>
+    const app = angular.module("myapp",[]);
+    app.controller('con',($scope)=>{
+        $scope.addtask = ()=>{
+            $scope.arr.push($scope.varun);
+        }
+    })
+
+</script>
+</html>

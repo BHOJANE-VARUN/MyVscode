@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./index.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple web page</title>
+  </head>
+  <body class="container">
+    <h1 class="text-center">Application For Permission To Date Me</h1>
+    <p>
+      <strong>Note:</strong>Form is to be completed at least 21 days prior to
+      date
+    </p>
+
+    <form class="container">
+      <fieldset class="container">
+        <legend>Personal Details</legend>
+
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="user_name"
+          required
+          id="name"
+          placeholder="Enter name here"
+        />
+        <br />
+        <label for="address">Address:</label>
+        <input
+          type="text"
+          name="user_address"
+          required
+          id="address"
+          placeholder="Enter address here"
+        />
+        <br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="user_email"
+          required
+          id="email"
+          placeholder="Enter email here"
+        />
+        <br />
+        <label for="name">Phone No:</label>
+        <input
+          type="text"
+          name="user_phone"
+          required
+          id="name"
+          placeholder="Enter 10 digit number"
+        />
+        <br />
+        <label for="name">IQ:</label>
+        <input
+          type="number"
+          name="user_iq"
+          required
+          id="iq"
+          placeholder="Enter IQ here"
+        />
+        <br />
+        <label for="nature">Nature</label><br />
+        <input type="radio" name="user_nature" value="i" id="introvert" /><label
+          for="introvert"
+          >Introvert</label
+        >
+        <br />
+        <input type="radio" name="user_nature" id="extrovert" value="e" /><label
+          for="extrovert"
+          >extrovert</label
+        >
+        <br />
+        <input type="radio" name="user_nature" id="other" value="o" /><label
+          for="other"
+          >Other</label
+        >
+        <br />
+        <label for="outdate">Date of Proposed Outing</label>
+        <input type="date" id="outdate" name="date" />
+      </fieldset>
+      <fieldset class="container">
+        <label>Check All That Apply</label>
+        <br />
+        <input type="checkbox" name="genz" id="genz" /><label for="genz"
+          >I have tattoos and/or piercings</label
+        >
+        <br />
+        <input type="checkbox" name="age" id="age" /><label for="age"
+          >I am more than 2 years older then you</label
+        >
+        <br />
+        <input type="checkbox" name="car" id="car" /><label for="car"
+          >I own a bike or car</label
+        >
+        <br />
+        <input type="checkbox" name="job" id="job" /><label for="job"
+          >I work full-time</label
+        >
+        <br />
+        <input type="checkbox" name="rich" id="rich" /><label for="rich"
+          >My parents are rich</label
+        >
+        <br />
+        <input type="checkbox" name="place" id="place" /><label for="place"
+          >Is the date at a well lit public location</label
+        >
+      </fieldset>
+      <div class="container">
+        <label for="political">Political Persuasion:</label>
+        <select name="political" id="political">
+          <option value="l">Left wing</option>
+          <option value="r">Right wing</option>
+          <option value="n">Not interested</option>
+        </select>
+        <br />
+        <label for="education">Education level Completed:</label>
+        <select name="education" id="education">
+          <option value="uni">University</option>
+          <option value="jun">Junior college</option>
+          <option value="high">high school</option>
+          <option value="pri">primary school</option>
+        </select>
+      </div>
+      <fieldset class="container">
+        <legend>Essay Section</legend>
+        <label for="des"
+          >In 50 words or more explain why you want to date me</label
+        ><br />
+        <textarea
+          type="text"
+          id="des"
+          placeholder="Enter text here"
+          cols="50"
+          rows="5"
+        ></textarea>
+
+        <br />
+        <label for="docs"
+          >Upload Police Clearance Certificate, Bank Statement and Medical
+          Certifiates here:</label
+        >
+        <input type="file" name="docs" id="docs" />
+      </fieldset>
+      <button class="btn-primary" type="submit">Send your Application</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"Local: second","url":"c:\\MyVScode\\cp\\TLE\\1400\\second.cpp","tests":[{"id":1739630551416,"input":"5\n5\n1 2 3 4 5\n8\n8 2 3 1 1 7 4 3\n5\n3 3 3 3 3\n1\n1\n2\n2 1\n","output":"3\n1\n0\n0\n0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\MyVScode\\cp\\TLE\\1400\\second.cpp","group":"local","local":true}

@@ -27,4 +27,12 @@
 </div>
 
 </body>
+<script>
+      const temp = async ()=>{
+      const data =  await fetch("http://localhost:7777/Simple/DatabaseOperations?ch=4&name=tsting&sal=77474");
+      const varun = await data.text();
+      console.log(varun.split(" "));
+    }
+    temp();
+</script>
 </html>

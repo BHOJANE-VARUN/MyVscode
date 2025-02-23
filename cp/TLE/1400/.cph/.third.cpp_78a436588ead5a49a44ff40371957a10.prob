@@ -1,0 +1,1 @@
+{"name":"Local: third","url":"c:\\MyVScode\\cp\\TLE\\1400\\third.cpp","tests":[{"id":1739715506104,"input":"1\n3\n3 8\n10 18\n6 11\n\n","output":"5\n\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\MyVScode\\cp\\TLE\\1400\\third.cpp","group":"local","local":true}

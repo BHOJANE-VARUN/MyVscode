@@ -1,0 +1,1 @@
+{"name":"Local: second","url":"c:\\MyVScode\\cp\\Contests\\codeforces1003\\second.cpp","tests":[{"id":1739113898468,"input":"4\nbaa\nskibidus\ncc\nohio","output":"1\n8\n1\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\MyVScode\\cp\\Contests\\codeforces1003\\second.cpp","group":"local","local":true}
