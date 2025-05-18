@@ -1,0 +1,17 @@
+don't give spaces as follow
+"<" | ">" // this mf don't understand this
+"<"|">" // use this
+
+"abc" matches abc 
+[abc] matches a or b or c
+[{}] use this not 
+this "{}"
+
+
+bison -d ass3.y         # creates ass3.tab.c and ass3.tab.h
+flex ass3.l             # creates lex.yy.c
+gcc ass3.tab.c lex.yy.c -o parser -lfl
+./parser
+
+
+in third, ingnore whitespaces and newline else it is showing now giving correct output

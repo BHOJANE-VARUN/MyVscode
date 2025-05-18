@@ -48,7 +48,7 @@ int solve(BinaryTreeNode<int>*root,int tar,int &k)
             k= INT_MAX;
             return root->data;
         }
-
+ 
         if(lef!=-1)
         return lef;
         else return rig;
